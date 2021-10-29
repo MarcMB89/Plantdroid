@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a FavoriteList Component When it is rendered Then screen should match the snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#dcedc8",
+        "borderColor": "#212121",
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <RCTScrollView
+        data={
+          Array [
+            Object {
+              "_id": "6138c3ee29b6164724bbb898",
+              "common_name": "Olive tree",
+              "picture": "https://pfaf.org/Admin/PlantImages/OleaEuropaea.jpg",
+              "scientific_name": "Olea europaea",
+              "watering_per_week": 4,
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        viewabilityConfigCallbackPairs={Array []}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#aabb97",
+                    "borderColor": "#212121",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "fontSize": 2,
+                    "margin": 5,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://pfaf.org/Admin/PlantImages/OleaEuropaea.jpg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 50,
+                      "height": 130,
+                      "margin": 10,
+                      "width": 130,
+                    }
+                  }
+                />
+                <View>
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                        "fontSize": 20,
+                        "fontWeight": "bold",
+                        "marginLeft": 10,
+                        "marginTop": 5,
+                      }
+                    }
+                  >
+                    Scientific name:
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 17,
+                        "marginBottom": 12,
+                        "marginLeft": 12,
+                      }
+                    }
+                  >
+                    Olea europaea
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                        "fontSize": 20,
+                        "fontWeight": "bold",
+                        "marginLeft": 10,
+                        "marginTop": 5,
+                      }
+                    }
+                  >
+                    Common name:
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 17,
+                        "marginBottom": 12,
+                        "marginLeft": 12,
+                      }
+                    }
+                  >
+                    Olive tree
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
