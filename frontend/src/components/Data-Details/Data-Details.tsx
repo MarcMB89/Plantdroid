@@ -7,7 +7,7 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import styles from '../../styles/styles';
+import styles from './dataDetailsStyles';
 import {Button, Switch} from 'react-native-paper';
 
 export default function DataDetails({navigation, route}: any) {
@@ -33,32 +33,32 @@ export default function DataDetails({navigation, route}: any) {
   } = route.params;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.datadetails_container}>
       <StatusBar backgroundColor="#7BA891" barStyle="dark-content" />
-      <ScrollView style={styles.listbackground}>
-        <View style={styles.details_item}>
-          <Image source={{uri: picture}} style={styles.default_plant_photo} />
-          <View style={styles.details_item2}>
-            <Text style={styles.data_text_title_top}>Scientific name:</Text>
-            <Text style={styles.data_text_top}>{scientific_name}</Text>
-            <Text style={styles.data_text_title_top}>Common name:</Text>
-            <Text style={styles.data_text_top}>{common_name}</Text>
+      <ScrollView style={styles.datadetails_list_background}>
+        <View style={styles.datadetails_item}>
+          <Image source={{uri: picture}} style={styles.datadetails_default_plant_photo} />
+          <View style={styles.datadetails_item2}>
+            <Text style={styles.datadetails_text_title_top}>Scientific name:</Text>
+            <Text style={styles.datadetails_text_top}>{scientific_name}</Text>
+            <Text style={styles.datadetails_text_title_top}>Common name:</Text>
+            <Text style={styles.datadetails_text_top}>{common_name}</Text>
           </View>
         </View>
 
-        <View style={styles.details_item3}>
-          <Text style={styles.data_text_title}>Recommended temperature:</Text>
-          <Text style={styles.data_text}>{recommended_temperature}</Text>
-          <Text style={styles.data_text_title}>Sun exposure: </Text>
-          <Text style={styles.data_text}>{sun_exposure}</Text>
-          <Text style={styles.data_text_title}>Watering per week:</Text>
-          <Text style={styles.data_text}>{watering_per_week}</Text>
-          <Text style={styles.data_text_title}>Soil: </Text>
-          <Text style={styles.data_text}>{soil}</Text>
-          <Text style={styles.data_text_title}>Description:</Text>
-          <Text style={styles.data_text}>{description}</Text>
+        <View style={styles.datadetails_item3}>
+          <Text style={styles.datadetails_text_title}>Recommended temperature:</Text>
+          <Text style={styles.datadetails_text}>{recommended_temperature}</Text>
+          <Text style={styles.datadetails_text_title}>Sun exposure: </Text>
+          <Text style={styles.datadetails_text}>{sun_exposure}</Text>
+          <Text style={styles.datadetails_text_title}>Watering per week:</Text>
+          <Text style={styles.datadetails_text}>{watering_per_week}</Text>
+          <Text style={styles.datadetails_text_title}>Soil: </Text>
+          <Text style={styles.datadetails_text}>{soil}</Text>
+          <Text style={styles.datadetails_text_title}>Description:</Text>
+          <Text style={styles.datadetails_text}>{description}</Text>
         </View>
-        <View style={styles.dataDetails_buttons}>
+        <View style={styles.datadetails_buttons}>
           <Button
             color="#7BA891"
             mode="contained"

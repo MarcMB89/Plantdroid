@@ -10,7 +10,7 @@ import {
 
 import {Button, TextInput} from 'react-native-paper';
 
-import styles from '../../styles/styles';
+import styles from './loginStyle';
 
 export default function Login({navigation}: any) {
   const [email, setEmail] = useState('');
@@ -24,9 +24,9 @@ export default function Login({navigation}: any) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.login_container}>
       <StatusBar backgroundColor="#7BA891" barStyle="dark-content" />
-      <View style={styles.background}>
+      <View style={styles.login_background}>
         <ImageBackground
           style={styles.login_background}
           source={{uri: 'https://i.ibb.co/99S3gsz/Background-Plantdroid.jpg'}}>
@@ -37,14 +37,14 @@ export default function Login({navigation}: any) {
             />
             <Text style={styles.login_title}>Plantdroid</Text>
             <TextInput
-              style={styles.userData}
+              style={styles.login_userData}
               left
               label="Email"
               value={email}
               onChangeText={item => setEmail(item)}
             />
             <TextInput
-              style={styles.userData}
+              style={styles.login_userData}
               left
               label="Password"
               value={password}

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {loadPlants} from '../../redux/actions/actions.creator';
 import {
@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import styles from '../../styles/styles';
+import styles from './dataListStyles';
 
 export default function DataList({navigation}: any) {
   const plants: any = useSelector((store: any) => store.plants);
@@ -24,9 +24,9 @@ export default function DataList({navigation}: any) {
   }, [plants, dispatch]);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.datalist_container}>
       <StatusBar backgroundColor="#7BA891" barStyle="dark-content" />
-      <View style={styles.listbackground}>
+      <View style={styles.datalist_background}>
         <View>
           <FlatList
             keyExtractor={item => item._id}
@@ -36,16 +36,16 @@ export default function DataList({navigation}: any) {
                 onPress={() => {
                   navigation.navigate('DataDetails', item);
                 }}>
-                <View style={styles.listItem}>
+                <View style={styles.datalist_listItem}>
                   <Image
                     source={{uri: item.picture}}
-                    style={styles.default_plant_photo}
+                    style={styles.datalist_default_plant_photo}
                   />
                   <View>
-                    <Text style={styles.list_text_title}>Scientific name:</Text>
-                    <Text style={styles.list_text}>{item.scientific_name}</Text>
-                    <Text style={styles.list_text_title}>Common name:</Text>
-                    <Text style={styles.list_text}>{item.common_name}</Text>
+                    <Text style={styles.datalist_list_text_title}>Scientific name:</Text>
+                    <Text style={styles.datalist_list_text}>{item.scientific_name}</Text>
+                    <Text style={styles.datalist_list_text_title}>Common name:</Text>
+                    <Text style={styles.datalist_list_text}>{item.common_name}</Text>
                   </View>
                 </View>
               </TouchableOpacity>

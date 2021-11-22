@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import {Button, TextInput} from 'react-native-paper';
-import styles from '../../styles/styles';
+import styles from './registerStyle';
 
 export default function Register({navigation}: any) {
   const [user, setUser] = useState('');
@@ -20,34 +20,34 @@ export default function Register({navigation}: any) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.register_container}>
       <StatusBar backgroundColor="#7BA891" />
-      <View style={styles.login_background}>
+      <View style={styles.register_background}>
         <ImageBackground
-          style={styles.login_background}
+          style={styles.register_background}
           source={{uri: 'https://i.ibb.co/99S3gsz/Background-Plantdroid.jpg'}}>
-          <View style={styles.body}>
+          <View style={styles.register_body}>
             <Image
               source={{uri: 'https://i.ibb.co/hVqfSSp/Plantdroid-logo-v3.png'}}
-              style={styles.login_logo}
+              style={styles.register_logo}
             />
-            <Text style={styles.login_title}>Plantdroid</Text>
+            <Text style={styles.register_title}>Plantdroid</Text>
             <TextInput
-              style={styles.userData}
+              style={styles.register_userData}
               left
               label="User"
               value={user}
               onChangeText={item => setUser(item)}
             />
             <TextInput
-              style={styles.userData}
+              style={styles.register_userData}
               left
               label="Email"
               value={email}
               onChangeText={item => setEmail(item)}
             />
             <TextInput
-              style={styles.userData}
+              style={styles.register_userData}
               left
               secureTextEntry={true}
               label="Password"
@@ -55,7 +55,7 @@ export default function Register({navigation}: any) {
               onChangeText={item => setPassword(item)}
             />
             <Button
-              style={styles.login_fixToText}
+              style={styles.register_fixToText}
               color="#7BA891"
               mode="contained"
               onPress={onPressHandler}>

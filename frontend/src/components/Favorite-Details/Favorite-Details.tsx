@@ -7,15 +7,12 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import styles from '../../styles/styles';
+import styles from './favoriteDetailsStyles';
 import {Button, TextInput} from 'react-native-paper';
 
 export default function DataDetails({navigation, route}: any) {
   const onPressHandlerDashboard = () => {
     navigation.navigate('Dashboard');
-  };
-  const onPressHandlerFavoriteList = () => {
-    navigation.navigate('FavoriteList');
   };
 
   const {
@@ -26,27 +23,27 @@ export default function DataDetails({navigation, route}: any) {
   } = route.params;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.favoritedetails_container}>
       <StatusBar backgroundColor="#7BA891" barStyle="dark-content" />
-      <ScrollView style={styles.listbackground}>
-        <View style={styles.details_item}>
-          <Image source={{uri: picture}} style={styles.default_plant_photo} />
-          <View style={styles.details_item2}>
-            <Text style={styles.data_text_title_top}>Scientific name:</Text>
-            <Text style={styles.data_text_top}>{scientific_name}</Text>
-            <Text style={styles.data_text_title_top}>Common name:</Text>
-            <Text style={styles.data_text_top}>{common_name}</Text>
+      <ScrollView style={styles.favoritedetails_list_background}>
+        <View style={styles.favoritedetails_item}>
+          <Image source={{uri: picture}} style={styles.favoritedetails_default_plant_photo} />
+          <View style={styles.favoritedetails_item2}>
+            <Text style={styles.favoritedetails_data_text_title_top}>Scientific name:</Text>
+            <Text style={styles.favoritedetails_data_text_top}>{scientific_name}</Text>
+            <Text style={styles.favoritedetails_data_text_title_top}>Common name:</Text>
+            <Text style={styles.favoritedetails_data_text_top}>{common_name}</Text>
           </View>
         </View>
         <View style={styles.favoritedetails_input}>
-        <Text style={styles.favoriteText}>Recommended watering per week for this plant:</Text>
+        <Text style={styles.favoritedetails_text}>Recommended watering per week for this plant:</Text>
         <TextInput
           style={styles.favoritedetails_input}
           left
           label={watering_per_week}
         />
         </View>
-        <View style={styles.dataDetails_buttons}>
+        <View style={styles.favoritedetails_buttons}>
           <Button
             color="#7BA891"
             mode="contained"

@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import styles from '../../styles/styles';
+import styles from './favoriteListStyles';
 
 export default function DataList({navigation}: any) {
   const plants: any = useSelector((store: any) => store.plants);
@@ -32,9 +32,9 @@ export default function DataList({navigation}: any) {
   }, [plants, dispatch]);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.favoritelist_container}>
       <StatusBar backgroundColor="#7BA891" barStyle="dark-content" />
-      <View style={styles.listbackground}>
+      <View style={styles.favoritelist_list_background}>
         <View>
           <FlatList
             keyExtractor={item => item._id}
@@ -44,16 +44,16 @@ export default function DataList({navigation}: any) {
                 onPress={() => {
                   navigation.navigate('FavoriteDetails', item);
                 }}>
-                <View style={styles.listItem}>
+                <View style={styles.favoritelist_list_item}>
                   <Image
                     source={{uri: item.picture}}
-                    style={styles.default_plant_photo}
+                    style={styles.favoritelist_default_plant_photo}
                   />
                   <View>
-                    <Text style={styles.list_text_title}>Scientific name:</Text>
-                    <Text style={styles.list_text}>{item.scientific_name}</Text>
-                    <Text style={styles.list_text_title}>Common name:</Text>
-                    <Text style={styles.list_text}>{item.common_name}</Text>
+                    <Text style={styles.favoritelist_list_text_title}>Scientific name:</Text>
+                    <Text style={styles.favoritelist_list_text}>{item.scientific_name}</Text>
+                    <Text style={styles.favoritelist_list_text_title}>Common name:</Text>
+                    <Text style={styles.favoritelist_list_text}>{item.common_name}</Text>
                   </View>
                 </View>
               </TouchableOpacity>

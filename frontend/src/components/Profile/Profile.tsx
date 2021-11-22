@@ -4,7 +4,7 @@ import {StatusBar, Text, ImageBackground, View, Image, SafeAreaView} from 'react
 
 import {Button} from 'react-native-paper';
 
-import styles from '../../styles/styles';
+import styles from './profileStyle';
 
 
 export default function Profile({navigation}: any) {
@@ -12,11 +12,11 @@ export default function Profile({navigation}: any) {
     navigation.navigate('Login');
   };
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.profile_container}>
       <StatusBar backgroundColor="#7BA891" />
-      <View style={styles.login_background}>
+      <View style={styles.profile_background}>
         <ImageBackground
-          style={styles.login_background}
+          style={styles.profile_background}
           source={{uri: 'https://i.ibb.co/99S3gsz/Background-Plantdroid.jpg'}}>
           <View style={styles.profile_body}>
             <Image
